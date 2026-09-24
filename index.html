@@ -1441,5 +1441,242 @@ document.getElementById("year").textContent = new Date().getFullYear();
 })();
 </script>
 
+ <!-- プライバシー説明：ここから -->
+<style>
+#rp-policy{
+  padding:40px 7%;
+  background:#f7f5ef;
+  color:#243746;
+  overflow-wrap:anywhere;
+}
+#rp-policy details{
+  max-width:1100px;
+  margin:16px auto;
+  border:1px solid #d8d3c8;
+  padding:20px;
+  background:white;
+  scroll-margin-top:30px;
+}
+#rp-policy summary{
+  cursor:pointer;
+  font-weight:bold;
+  font-size:20px;
+}
+#rp-policy p{
+  font-size:15px;
+  line-height:1.8;
+}
+#rp-policy a{
+  color:inherit;
+  text-decoration:underline;
+}
+.rp-policy-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px 24px;
+  margin-top:20px;
+}
+</style>
+
+<section id="rp-policy" aria-label="Privacy information">
+  <details id="rp-privacy">
+    <summary id="rp-privacy-title">Privacy information</summary>
+    <div id="rp-privacy-text"></div>
+    <p>
+      <a href="mailto:reachprimetcc@gmail.com">
+        reachprimetcc@gmail.com
+      </a>
+    </p>
+  </details>
+
+  <details id="rp-storage">
+    <summary id="rp-storage-title">
+      Cookies &amp; browser storage
+    </summary>
+    <div id="rp-storage-text"></div>
+  </details>
+
+  <noscript>
+    <p>
+      Privacy contact:
+      <a href="mailto:reachprimetcc@gmail.com">
+        reachprimetcc@gmail.com
+      </a>.
+      TESDA receives students’ names and course participation
+      information. Companies commissioning training receive
+      participating students’ attendance records and academic
+      results. Retention periods have not yet been established.
+    </p>
+  </noscript>
+</section>
+
+<script>
+(() => {
+  "use strict";
+
+  if(document.getElementById("rp-policy-links")) return;
+
+  const texts = {
+    en: {
+      privacy: "Privacy information",
+      storage: "Cookies & browser storage",
+
+      paragraphs: [
+        "Operator: ReachPrime Training Center Corp. | Information updated: September 24, 2026.",
+
+        "This notice describes the confirmed data-sharing arrangements and privacy contact. It does not replace the information provided on individual application forms.",
+
+        "Sharing: We provide students’ names and course participation information to TESDA. For training commissioned by Japanese companies, we provide participating students’ attendance records and academic results to the company commissioning the training.",
+
+        "Retention: Specific retention periods have not yet been established. Please contact us for questions about the retention or deletion of your records.",
+
+        "Your requests: For privacy inquiries or requests to access, correct, or delete your personal data, use the email address below. Requests will be handled in accordance with applicable law."
+      ],
+
+      browser: [
+        "ReachPrime does not use analytics or advertising measurement tools on this website.",
+
+        "The website uses localStorage, a browser storage feature distinct from cookies, to remember your selected display language. This setting remains until it is removed or cleared by your browser. You can remove it using your browser’s site-data settings; doing so resets your saved language preference.",
+
+        "External application forms and hosting services may process data separately. This notice does not assert that those services use no cookies. Please review their privacy notices before submitting information."
+      ]
+    },
+
+    ja: {
+      privacy: "プライバシーについて",
+      storage: "クッキー・ブラウザー保存について",
+
+      paragraphs: [
+        "運営者：ReachPrime Training Center Corp.｜情報更新日：2026年9月24日。",
+
+        "この説明は、確認済みの個人情報の提供先と相談窓口を案内するものです。各申込フォームに記載される個人情報の取り扱いの説明に代わるものではありません。",
+
+        "外部提供：当校は、TESDAへ生徒の氏名・受講情報を提供します。日本企業から依頼を受けた研修では、対象生徒の出席状況・成績を研修依頼元の企業へ提供します。",
+
+        "保存期間：具体的な保存期間は現在未定です。ご自身の記録の保存・削除については、下記の窓口へお問い合わせください。",
+
+        "ご相談：個人情報の取り扱いや、ご自身の情報の開示・訂正・削除に関するご相談は、下記メールアドレスへご連絡ください。適用される法令に基づき対応します。"
+      ],
+
+      browser: [
+        "ReachPrimeは、このHPでアクセス解析・広告計測ツールを使用していません。",
+
+        "選択した表示言語を記憶するため、クッキーとは別のブラウザー保存機能（localStorage）を使用します。この設定は、ご自身またはブラウザーによって削除されるまで保存されます。ブラウザーのサイトデータ設定から削除すると、保存した言語設定がリセットされます。",
+
+        "外部の申込フォームやホスティングサービスでは、別途データが処理される場合があります。この説明は、それらのサービスがクッキーを使用しないことを保証するものではありません。情報を送信する前に、各サービスのプライバシー説明をご確認ください。"
+      ]
+    },
+
+    tl: {
+      privacy: "Impormasyon tungkol sa privacy",
+      storage: "Cookies at imbakan ng browser",
+
+      paragraphs: [
+        "Tagapangasiwa: ReachPrime Training Center Corp. | Na-update: Setyembre 24, 2026.",
+
+        "Inilalarawan dito ang nakumpirmang pagbabahagi ng datos at ang contact para sa privacy. Hindi nito pinapalitan ang impormasyong nasa bawat application form.",
+
+        "Pagbabahagi: Ibinabahagi namin sa TESDA ang pangalan ng mga mag-aaral at impormasyon tungkol sa kanilang paglahok sa kurso. Para sa pagsasanay na ipinagkatiwala ng mga kumpanyang Hapones, ibinabahagi namin sa kumpanyang nagpagawa ng pagsasanay ang mga tala ng pagpasok at resulta ng pag-aaral ng mga kalahok.",
+
+        "Pag-iingat ng datos: Wala pang itinakdang tiyak na panahon ng pag-iingat. Makipag-ugnayan sa amin para sa mga tanong tungkol sa pag-iingat o pagbura ng inyong mga rekord.",
+
+        "Mga kahilingan: Para sa mga tanong tungkol sa privacy o kahilingang makita, itama, o burahin ang inyong personal na datos, gamitin ang email sa ibaba. Tutugunan ang mga kahilingan alinsunod sa naaangkop na batas."
+      ],
+
+      browser: [
+        "Hindi gumagamit ang ReachPrime ng mga tool para sa analytics o pagsukat ng advertising sa website na ito.",
+
+        "Gumagamit ang website ng localStorage, isang imbakan ng browser na iba sa cookies, upang tandaan ang napiling wika. Nananatili ito hanggang burahin ninyo o ng browser. Maaari itong alisin sa mga setting ng site data ng browser; mare-reset ang naka-save na wika.",
+
+        "Maaaring hiwalay na magproseso ng datos ang mga panlabas na application form at hosting service. Hindi sinasabi ng abisong ito na walang cookies ang mga serbisyong iyon. Basahin ang kanilang mga abiso sa privacy bago magsumite ng impormasyon."
+      ]
+    }
+  };
+
+  const section = document.getElementById("rp-policy");
+  const footer = document.querySelector("footer");
+
+  const nav = document.createElement("nav");
+  nav.id = "rp-policy-links";
+  nav.className = "rp-policy-links";
+
+  const privacyLink = document.createElement("a");
+  const storageLink = document.createElement("a");
+
+  privacyLink.href = "#rp-privacy";
+  storageLink.href = "#rp-storage";
+  nav.append(privacyLink, storageLink);
+
+  if(footer){
+    footer.before(section);
+    footer.append(nav);
+  }else{
+    section.before(nav);
+  }
+
+  [privacyLink, storageLink].forEach(link => {
+    link.addEventListener("click", () => {
+      document.getElementById(link.hash.slice(1)).open = true;
+    });
+  });
+
+  function renderParagraphs(id, paragraphs){
+    const elements = paragraphs.map(text => {
+      const p = document.createElement("p");
+      p.textContent = text;
+      return p;
+    });
+
+    document.getElementById(id).replaceChildren(...elements);
+  }
+
+  function render(){
+    const lang = document.documentElement.lang;
+    const t = texts[lang] || texts.en;
+
+    section.lang = texts[lang] ? lang : "en";
+    section.setAttribute("aria-label", t.privacy);
+    nav.setAttribute("aria-label", t.privacy);
+
+    privacyLink.textContent = t.privacy;
+    storageLink.textContent = t.storage;
+
+    document.getElementById("rp-privacy-title").textContent =
+      t.privacy;
+
+    document.getElementById("rp-storage-title").textContent =
+      t.storage;
+
+    renderParagraphs("rp-privacy-text", t.paragraphs);
+    renderParagraphs("rp-storage-text", t.browser);
+  }
+
+  function openHash(){
+    if(["#rp-privacy", "#rp-storage"].includes(location.hash)){
+      const detail = document.getElementById(
+        location.hash.slice(1)
+      );
+
+      detail.open = true;
+      detail.scrollIntoView();
+    }
+  }
+
+  new MutationObserver(render).observe(
+    document.documentElement,
+    {
+      attributes: true,
+      attributeFilter: ["lang"]
+    }
+  );
+
+  window.addEventListener("hashchange", openHash);
+
+  render();
+  openHash();
+})();
+</script>
+<!-- プライバシー説明：ここまで --> 
+
 </body>
 </html>
