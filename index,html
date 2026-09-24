@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RPTC | ReachPrime Training Center</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+color:#1a1a1a;
+background:#fff;
+letter-spacing:0.3px;
+}
+
+.hero{
+height:100vh;
+background:url('hero.jpg') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+position:relative;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:800px;
+padding:20px;
+}
+
+h1{
+font-size:44px;
+margin:0;
+}
+
+p{
+font-size:18px;
+opacity:0.9;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 30px;
+background:#fff;
+color:#111;
+text-decoration:none;
+border-radius:3px;
+font-weight:bold;
+}
+
+.section{
+padding:80px 20px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+border-bottom:1px solid #ddd;
+padding-bottom:10px;
+font-weight:500;
+}
+
+.card{
+background:#f7f7f7;
+padding:20px;
+margin-top:15px;
+border-left:3px solid #111;
+}
+
+.footer{
+background:#111;
+color:#fff;
+text-align:center;
+padding:40px;
+font-size:13px;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+
+<h1>Japanese Language. Real Discipline.</h1>
+<p>We develop people who can function in Japan — not just study Japanese.</p>
+
+<a class="btn" href="https://reachprime-enrollment.k-m-a-b-8824.chatgpt.site" target="_blank">
+Apply Now
+</a>
+
+</div>
+</div>
+
+<!-- INTRO / BRAND -->
+<div class="section">
+<h2>ReachPrime Training Center Corp.</h2>
+
+<p>
+RPTC is a Japanese language training institution based in the Philippines,  
+focused on developing real-world communication ability, discipline, and workplace readiness.
+</p>
+
+<div class="card">
+We do not focus only on passing exams.  
+We focus on building people who can perform in real Japanese environments.
+</div>
+</div>
+
+<!-- PHILOSOPHY -->
+<div class="section">
+<h2>Our Philosophy</h2>
+
+<div class="card">
+Language alone is not enough.<br><br>
+
+True success in Japan requires:<br>
+✔ Communication ability<br>
+✔ Discipline and responsibility<br>
+✔ Understanding of workplace behavior<br><br>
+
+We train all three.
+</div>
+</div>
+
+<!-- PROGRAM INTRO -->
+<div class="section">
+<h2>6-Month Intensive Program (N3 Target)</h2>
+
+<div class="card">
+A structured 6-month training program designed to guide students  
+from basic Japanese (N5 level) to practical N3-level communication ability.
+</div>
+</div>
+
+<!-- TRAINING CONTENT -->
+<div class="section">
+<h2>ReachPrime Training Content Corp.</h2>
+
+<div class="card">
+✔ N5–N4 foundational Japanese<br>
+✔ Listening and speaking development<br>
+✔ Daily conversation practice<br>
+✔ Workplace communication scenarios<br>
+✔ Japanese manners and discipline training<br>
+✔ N3-level reading and response training
+</div>
+</div>
+
+<!-- ADMISSION -->
+<div class="section">
+<h2>Admission Policy</h2>
+
+<div class="card">
+This is a selective program.<br><br>
+
+We accept only individuals who are willing to commit to structured learning:<br><br>
+
+✔ Consistency<br>
+✔ Discipline<br>
+✔ Responsibility<br>
+✔ Long-term learning mindset
+</div>
+</div>
+
+<!-- LOCATION -->
+<div class="section">
+<h2>Location</h2>
+
+<div class="card">
+ReachPrime Training Center Corp. (RPTC)<br>
+Pampanga, Philippines<br>
+Exact address provided upon inquiry.
+</div>
+</div>
+
+<!-- ENROLLMENT -->
+<div class="section">
+<h2>Enrollment</h2>
+
+<div class="card">
+Applications are reviewed carefully.<br>
+Only qualified applicants will be contacted.<br><br>
+
+<a class="btn" href="https://reachprime-enrollment.k-m-a-b-8824.chatgpt.site" target="_blank">
+Begin Application
+</a>
+</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+ReachPrime Training Center Corp. (RPTC)<br>
+Japanese Language & Human Development Academy
+</div>
+
+</body>
+</html>
