@@ -3,11 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ReachPrime | Japanese Education & School Management Systems</title>
-
-<meta name="description"
-content="ReachPrime Training Center Corp. provides Japanese language education and corporate Japanese training, and develops school and student management systems in the Philippines.">
+<meta name="description" content="ReachPrime Training Center Corp. provides Japanese language education and corporate Japanese training, and develops school and student management systems in the Philippines.">
 
 <style>
 :root{
@@ -18,15 +15,8 @@ content="ReachPrime Training Center Corp. provides Japanese language education a
   --muted:#59666f;
   --line:#ddd9d0;
 }
-
-*{
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -34,25 +24,11 @@ body{
   color:var(--text);
   line-height:1.8;
 }
+a{color:inherit}
+a:focus-visible{outline:3px solid #b58843;outline-offset:5px}
+p,h1,h3{overflow-wrap:anywhere}
+[hidden]{display:none!important}
 
-a{
-  color:inherit;
-}
-
-a:focus-visible{
-  outline:3px solid #b58843;
-  outline-offset:5px;
-}
-
-p{
-  overflow-wrap:anywhere;
-}
-
-[hidden]{
-  display:none !important;
-}
-
-/* ACCESSIBILITY */
 .skip-link{
   position:absolute;
   top:-100px;
@@ -61,12 +37,9 @@ p{
   background:white;
   padding:12px 20px;
 }
+.skip-link:focus{top:15px}
 
-.skip-link:focus{
-  top:15px;
-}
-
-/* HEADER */
+/* ヘッダー・会社ロゴ */
 header{
   background:white;
   padding:16px 5%;
@@ -76,8 +49,6 @@ header{
   justify-content:space-between;
   gap:20px;
 }
-
-/* 横長会社ロゴの上下の余白を抑えて表示 */
 .brand{
   display:block;
   width:480px;
@@ -87,7 +58,6 @@ header{
   flex-shrink:0;
   overflow:hidden;
 }
-
 .brand img{
   position:static;
   display:block;
@@ -97,7 +67,6 @@ header{
   object-fit:cover;
   object-position:center;
 }
-
 nav{
   display:flex;
   align-items:center;
@@ -105,29 +74,46 @@ nav{
   gap:12px 22px;
   flex-wrap:wrap;
 }
+header nav{flex:1 1 440px}
+nav a{text-decoration:none;font-size:13px}
+nav a:hover{text-decoration:underline;text-underline-offset:5px}
 
-nav a{
-  text-decoration:none;
-  font-size:13px;
+/* 言語切替 */
+.language-switch{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+header .language-switch{margin-left:auto}
+.language-switch label{
+  font-size:12px;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.language-switch select{
+  min-height:44px;
+  padding:8px 32px 8px 12px;
+  border:1px solid #c8b38d;
+  border-radius:4px;
+  background:white;
+  color:var(--navy);
+  font:inherit;
+  font-size:14px;
+  cursor:pointer;
+}
+.language-switch select:focus-visible{
+  outline:3px solid #b58843;
+  outline-offset:3px;
 }
 
-nav a:hover{
-  text-decoration:underline;
-  text-underline-offset:5px;
-}
-
-/* HERO */
+/* トップ */
 .hero{
   background:var(--navy);
   color:white;
   padding:90px 7% 60px;
 }
-
-.hero-inner{
-  max-width:1100px;
-  margin:auto;
-}
-
+.hero-inner{max-width:1100px;margin:auto}
 .label{
   color:#916826;
   font-size:11px;
@@ -135,12 +121,7 @@ nav a:hover{
   letter-spacing:2px;
   margin:0 0 22px;
 }
-
-.hero .label,
-.dark .label{
-  color:var(--gold);
-}
-
+.hero .label,.dark .label{color:var(--gold)}
 h1{
   font-family:Georgia,serif;
   font-size:clamp(48px,7vw,90px);
@@ -148,24 +129,18 @@ h1{
   line-height:1.1;
   margin:0 0 30px;
 }
-
-h1 em{
-  color:var(--gold);
-}
-
+h1 em{color:var(--gold)}
 .hero-description{
   max-width:700px;
   font-size:20px;
   color:#d6dfe6;
 }
-
 .actions{
   display:flex;
   flex-wrap:wrap;
   gap:12px;
   margin-top:28px;
 }
-
 .button{
   display:inline-flex;
   align-items:center;
@@ -181,22 +156,9 @@ h1 em{
   border:1px solid transparent;
   overflow-wrap:anywhere;
 }
-
-.button:hover{
-  filter:brightness(1.08);
-}
-
-.gold{
-  background:var(--gold);
-  color:var(--navy);
-}
-
-.outline{
-  background:transparent;
-  border-color:#8292a0;
-  color:white;
-}
-
+.button:hover{filter:brightness(1.08)}
+.gold{background:var(--gold);color:var(--navy)}
+.outline{background:transparent;border-color:#8292a0;color:white}
 .hero-note{
   margin-top:55px;
   font-size:11px;
@@ -204,13 +166,8 @@ h1 em{
   color:#b6c4cf;
 }
 
-/* COMMON SECTIONS */
-.section{
-  max-width:1180px;
-  margin:auto;
-  padding:80px 35px;
-}
-
+/* 共通 */
+.section{max-width:1180px;margin:auto;padding:80px 35px}
 h2{
   font-family:Georgia,serif;
   font-size:clamp(30px,4vw,46px);
@@ -219,45 +176,23 @@ h2{
   margin:0 0 25px;
   overflow-wrap:anywhere;
 }
-
-h3{
-  font-size:23px;
-  font-weight:normal;
-  line-height:1.5;
-}
-
+h3{font-size:23px;font-weight:normal;line-height:1.5}
 .grid{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(0,1fr);
   gap:60px;
 }
-
-.grid > *{
-  min-width:0;
-}
-
-.large{
-  font-size:20px;
-}
-
-.line{
-  border-top:1px solid var(--line);
-}
-
-.tags{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:25px;
-}
-
+.grid > *{min-width:0}
+.large{font-size:20px}
+.line{border-top:1px solid var(--line)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}
 .tags span{
   border:1px solid #d4d0c6;
   padding:5px 12px;
   font-size:12px;
 }
 
-/* SCHOOL */
+/* 学校・入学 */
 .heading{
   display:flex;
   align-items:center;
@@ -265,7 +200,6 @@ h3{
   gap:20px;
   margin-bottom:30px;
 }
-
 .school-logo{
   display:block;
   width:120px;
@@ -274,7 +208,6 @@ h3{
   object-fit:contain;
   border-radius:50%;
 }
-
 .enrollment-label{
   display:inline-block;
   background:#e9dfc9;
@@ -284,20 +217,9 @@ h3{
   font-weight:bold;
   letter-spacing:1px;
 }
-
-.training-item{
-  border-top:1px solid #d4d0c6;
-  padding:20px 0;
-}
-
-.training-item strong{
-  font-size:18px;
-}
-
-.training-item p{
-  font-size:14px;
-  margin:8px 0 0;
-}
+.training-item{border-top:1px solid #d4d0c6;padding:20px 0}
+.training-item strong{font-size:18px}
+.training-item p{font-size:14px;margin:8px 0 0}
 
 /* TESDA */
 .tesda{
@@ -309,107 +231,47 @@ h3{
   margin-top:35px;
   border:1px solid #e5e1d7;
 }
+.tesda img{display:block;width:70px;height:auto;flex-shrink:0}
+.tesda > div{min-width:0}
+.tesda p{margin:5px 0;font-size:14px}
+.registration{margin-top:15px;font-size:14px;overflow-wrap:anywhere}
+.registration dt{font-weight:bold}
+.registration dd{margin:0 0 10px}
 
-.tesda img{
-  display:block;
-  width:70px;
-  height:auto;
-  flex-shrink:0;
-}
+/* 法人研修 */
+.dark{background:var(--navy);color:white}
+.dark p{color:#d2dce4}
+.dark h2{font-family:Arial,sans-serif;line-height:1.5;font-size:32px}
+.panel{padding:30px;border:1px solid #687a89;align-self:center}
+.panel ul{padding-left:20px}
+.panel li{margin:12px 0}
 
-.tesda > div{
-  min-width:0;
-}
-
-.tesda p{
-  margin:5px 0;
-  font-size:14px;
-}
-
-.registration{
-  margin-top:15px;
-  font-size:14px;
-  overflow-wrap:anywhere;
-}
-
-.registration dt{
-  font-weight:bold;
-}
-
-.registration dd{
-  margin:0 0 10px;
-}
-
-/* CORPORATE TRAINING */
-.dark{
-  background:var(--navy);
-  color:white;
-}
-
-.dark p{
-  color:#d2dce4;
-}
-
-.dark h2{
-  font-family:Arial,sans-serif;
-  line-height:1.5;
-  font-size:32px;
-}
-
-.panel{
-  padding:30px;
-  border:1px solid #687a89;
-  align-self:center;
-}
-
-.panel ul{
-  padding-left:20px;
-}
-
-.panel li{
-  margin:12px 0;
-}
-
-/* SYSTEM DEVELOPMENT */
-.status{
-  font-size:13px;
-  color:#916826;
-}
-
+/* システム */
+.status{font-size:13px;color:#916826}
 .system-art{
   background:#eae5d9;
   padding:35px;
   border-bottom:3px solid #b58843;
 }
-
 .system-art h3{
   font-family:Georgia,serif;
   font-size:clamp(32px,4vw,48px);
   line-height:1.2;
   margin:20px 0;
 }
+.system-art em{color:#916826}
 
-.system-art em{
-  color:#916826;
-}
-
-/* TEACHER RECRUITMENT */
+/* 教師募集 */
 .career-panel{
   padding:30px;
   border:1px solid #d4d0c6;
   background:white;
   align-self:start;
 }
+.career-panel h3{margin-top:0}
 
-.career-panel h3{
-  margin-top:0;
-}
-
-/* CONTACT */
-.contact{
-  text-align:center;
-}
-
+/* 問い合わせ */
+.contact{text-align:center}
 .languages{
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
@@ -417,145 +279,71 @@ h3{
   text-align:left;
   margin:35px 0;
 }
+.languages article{border:1px solid #d4d0c6;padding:22px}
+.languages strong{font-size:19px}
+.languages p{font-size:14px}
+.contact .actions{justify-content:center}
+.muted{color:var(--muted);font-size:14px}
 
-.languages article{
-  border:1px solid #d4d0c6;
-  padding:22px;
+/* フッター */
+footer{background:var(--navy);color:white;padding:40px 7%;font-size:13px}
+footer strong{font-family:Georgia,serif;font-size:28px}
+footer a{display:inline-block;margin-top:15px}
+
+/* 言語別の文字サイズ */
+html[lang="ja"] h1{
+  font-family:Arial,sans-serif;
+  font-size:clamp(38px,5.5vw,72px);
+  line-height:1.4;
+}
+html[lang="ja"] h2,
+html[lang="ja"] .system-art h3{
+  font-family:Arial,sans-serif;
+  font-size:clamp(28px,3.5vw,40px);
+  line-height:1.5;
+}
+html[lang="tl"] h1{
+  font-size:clamp(40px,5.5vw,72px);
+  line-height:1.2;
 }
 
-.languages strong{
-  font-size:19px;
-}
-
-.languages p{
-  font-size:14px;
-}
-
-.contact .actions{
-  justify-content:center;
-}
-
-.muted{
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* FOOTER */
-footer{
-  background:var(--navy);
-  color:white;
-  padding:40px 7%;
-  font-size:13px;
-}
-
-footer strong{
-  font-family:Georgia,serif;
-  font-size:28px;
-}
-
-footer a{
-  display:inline-block;
-  margin-top:15px;
-}
-
-/* TABLET / MOBILE */
+/* スマートフォン */
 @media(max-width:1100px){
-  header{
-    flex-direction:column;
-    justify-content:center;
-  }
+  header{flex-direction:column;justify-content:center}
+  header nav{flex:0 1 auto}
+  header .language-switch{margin-left:0}
 }
-
 @media(max-width:800px){
-  nav{
-    gap:10px 18px;
-  }
-
-  .grid{
-    grid-template-columns:minmax(0,1fr);
-    gap:30px;
-  }
-
-  .section{
-    padding:60px 6%;
-  }
-
-  .hero{
-    padding:65px 6% 40px;
-  }
-
-  .languages{
-    grid-template-columns:minmax(0,1fr);
-    gap:12px;
-  }
-
-  .school-logo{
-    width:85px;
-    height:85px;
-  }
-
-  .dark h2{
-    font-size:27px;
-  }
+  nav{gap:10px 18px}
+  .grid{grid-template-columns:minmax(0,1fr);gap:30px}
+  .section{padding:60px 6%}
+  .hero{padding:65px 6% 40px}
+  .languages{grid-template-columns:minmax(0,1fr);gap:12px}
+  .school-logo{width:85px;height:85px}
+  .dark h2{font-size:27px}
 }
-
 @media(max-width:420px){
-  .heading{
-    align-items:flex-start;
-    gap:12px;
-  }
-
-  .heading h2{
-    font-size:28px;
-  }
-
-  .school-logo{
-    width:70px;
-    height:70px;
-  }
-
-  .hero-description,
-  .large{
-    font-size:18px;
-  }
-
-  .tesda{
-    padding:18px;
-    gap:15px;
-  }
-
-  .tesda img{
-    width:55px;
-  }
-
-  .panel,
-  .career-panel,
-  .system-art{
-    padding:24px;
-  }
-
-  .button{
-    padding:13px 18px;
-  }
+  .heading{align-items:flex-start;gap:12px}
+  .heading h2{font-size:28px}
+  .school-logo{width:70px;height:70px}
+  .hero-description,.large{font-size:18px}
+  .tesda{padding:18px;gap:15px}
+  .tesda img{width:55px}
+  .panel,.career-panel,.system-art{padding:24px}
+  .button{padding:13px 18px}
 }
-
 @media(prefers-reduced-motion:reduce){
-  html{
-    scroll-behavior:auto;
-  }
+  html{scroll-behavior:auto}
 }
 </style>
 </head>
 
 <body>
-
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header id="top">
   <a href="#top" class="brand" aria-label="ReachPrime home">
-    <img
-      src="company.png"
-      alt="ReachPrime Training Center Corp.">
+    <img src="company.png" alt="ReachPrime Training Center Corp.">
   </a>
 
   <nav aria-label="Main navigation">
@@ -566,15 +354,22 @@ footer a{
     <a href="#careers">Teach With Us</a>
     <a href="#contact">Contact</a>
   </nav>
+
+  <div class="language-switch">
+    <label for="siteLanguage">Language / 言語</label>
+    <select id="siteLanguage" aria-label="Select website language">
+      <option value="en">English</option>
+      <option value="ja">日本語</option>
+      <option value="tl">Tagalog</option>
+    </select>
+  </div>
 </header>
 
 <main id="main">
 
-<!-- COMPANY HERO -->
 <section class="hero">
   <div class="hero-inner">
     <p class="label">REACHPRIME TRAINING CENTER CORP.</p>
-
     <h1>People grow.<br>Businesses <em>evolve.</em></h1>
 
     <p class="hero-description">
@@ -584,13 +379,8 @@ footer a{
     </p>
 
     <div class="actions">
-      <a class="button gold" href="#school">
-        Study Japanese With Us →
-      </a>
-
-      <a class="button outline" href="#corporate">
-        Corporate Training →
-      </a>
+      <a class="button gold" href="#school">Study Japanese With Us →</a>
+      <a class="button outline" href="#corporate">Corporate Training →</a>
     </div>
 
     <div class="hero-note">
@@ -599,7 +389,6 @@ footer a{
   </div>
 </section>
 
-<!-- ABOUT -->
 <section class="section grid" id="about">
   <div>
     <p class="label">01 / ABOUT REACHPRIME</p>
@@ -612,13 +401,11 @@ footer a{
       and develop systems to support school operations
       and student management.
     </p>
-
     <p>
       Based in the Philippines, ReachPrime brings together
       Japanese language education, corporate Japanese training,
       and school management application development.
     </p>
-
     <p>
       Our own Japanese language school is also where our
       management system is being used and improved through
@@ -633,7 +420,6 @@ footer a{
   </div>
 </section>
 
-<!-- SCHOOL / STUDENT ENROLLMENT -->
 <section class="section line" id="school">
   <div class="heading">
     <div>
@@ -641,8 +427,7 @@ footer a{
       <h2>Learn the language.<br>Build the discipline.</h2>
     </div>
 
-    <img
-      class="school-logo"
+    <img class="school-logo"
       src="school.png"
       alt="RPTC Japanese Language Center logo"
       loading="lazy">
@@ -650,13 +435,9 @@ footer a{
 
   <div class="grid">
     <div>
-      <p class="enrollment-label">
-        NOW ACCEPTING STUDENT APPLICATIONS
-      </p>
+      <p class="enrollment-label">NOW ACCEPTING STUDENT APPLICATIONS</p>
 
-      <p class="large">
-        Your Japanese learning journey starts here.
-      </p>
+      <p class="large">Your Japanese learning journey starts here.</p>
 
       <p>
         Ready to take your Japanese learning seriously?
@@ -664,25 +445,20 @@ footer a{
         the communication skills, discipline, and confidence
         to move toward your goals.
       </p>
-
       <p>
         Learn Japanese for everyday life and workplace
         communication, with a focus on appropriate language,
         manners, and responsibility.
       </p>
-
       <p>
         We welcome motivated learners who are ready to attend
         consistently, practise regularly, and take an active
         role in their learning.
       </p>
 
-      <a
-        class="button"
-        id="studentApply"
+      <a class="button" id="studentApply"
         href="https://reachprime-enrollment.k-m-a-b-8824.chatgpt.site"
-        target="_blank"
-        rel="noopener noreferrer">
+        target="_blank" rel="noopener noreferrer">
         Apply Now — Start Your Japanese Journey ↗
       </a>
 
@@ -702,7 +478,6 @@ footer a{
           as the foundation for your Japanese learning.
         </p>
       </div>
-
       <div class="training-item">
         <strong>02 / Everyday Communication</strong>
         <p>
@@ -710,7 +485,6 @@ footer a{
           practical conversation.
         </p>
       </div>
-
       <div class="training-item">
         <strong>03 / Workplace Readiness</strong>
         <p>
@@ -721,25 +495,16 @@ footer a{
     </div>
   </div>
 
-  <!-- 現在のGitHub上の画像名は tesd.png -->
   <div class="tesda">
     <img src="tesd.png" alt="TESDA" loading="lazy">
-
     <div>
       <strong>TESDA-registered school</strong>
       <p>ReachPrime Training Center Corp.</p>
-
-      <!-- SETTINGSに入力すると表示されます -->
-      <dl
-        id="registration"
-        class="registration"
-        hidden>
-      </dl>
+      <dl id="registration" class="registration" hidden></dl>
     </div>
   </div>
 </section>
 
-<!-- CORPORATE TRAINING -->
 <section class="dark" id="corporate">
   <div class="section grid">
     <div>
@@ -768,10 +533,7 @@ footer a{
 
     <aside class="panel">
       <p class="label">OPEN FOR CORPORATE INQUIRIES</p>
-
-      <h3 lang="ja">
-        まずは、研修のご希望をお聞かせください。
-      </h3>
+      <h3 lang="ja">まずは、研修のご希望をお聞かせください。</h3>
 
       <ul lang="ja">
         <li>対象となる受講者について</li>
@@ -784,11 +546,9 @@ footer a{
   </div>
 </section>
 
-<!-- SCHOOL & STUDENT MANAGEMENT SYSTEMS -->
 <section class="section grid" id="systems">
   <div>
     <p class="label">04 / SCHOOL & STUDENT MANAGEMENT</p>
-
     <h2>School operations.<br>Student management.</h2>
 
     <p class="large">
@@ -796,23 +556,19 @@ footer a{
       for educational institutions, with a focus on
       small and medium-sized schools.
     </p>
-
     <p>
       Our system is already in use at our own Japanese
       language school. We continue to develop and improve
       it based on our day-to-day experience in school
       operations and student management.
     </p>
-
     <p class="status">
       ● In development · In use at our own school
     </p>
   </div>
 
   <div class="system-art">
-    <p class="label">
-      DEVELOPED THROUGH DAILY SCHOOL OPERATIONS
-    </p>
+    <p class="label">DEVELOPED THROUGH DAILY SCHOOL OPERATIONS</p>
 
     <h3>
       Support schools.<br>
@@ -820,9 +576,7 @@ footer a{
       <em>Keep improving.</em>
     </h3>
 
-    <p>
-      Practical school experience guides our system development.
-    </p>
+    <p>Practical school experience guides our system development.</p>
 
     <a href="#contact">
       Inquire About Our School Management System →
@@ -830,25 +584,19 @@ footer a{
   </div>
 </section>
 
-<!-- TEACHER RECRUITMENT -->
 <section class="section line" id="careers">
   <p class="label">05 / JOIN OUR TEACHING TEAM</p>
-
   <h2>Teach Japanese.<br>Help students move forward.</h2>
 
   <div class="grid">
     <div>
-      <p class="large">
-        We are recruiting Japanese language teachers.
-      </p>
-
+      <p class="large">We are recruiting Japanese language teachers.</p>
       <p>
         Help learners build practical Japanese communication
         skills and develop the confidence to use them.
         We welcome inquiries from people interested
         in teaching at ReachPrime Japanese Language Center.
       </p>
-
       <p>
         Share your Japanese language background,
         teaching experience, and availability
@@ -859,19 +607,13 @@ footer a{
 
     <div class="career-panel">
       <h3>Interested in teaching with us?</h3>
-
       <p>
         Please use our dedicated teacher application form
         to express your interest in joining our teaching team.
       </p>
 
-      <!-- フォームURL設定後に表示 -->
-      <a
-        class="button"
-        id="teacherApply"
-        hidden
-        target="_blank"
-        rel="noopener noreferrer">
+      <a class="button" id="teacherApply"
+        hidden target="_blank" rel="noopener noreferrer">
         Apply as a Japanese Teacher ↗
       </a>
 
@@ -883,16 +625,10 @@ footer a{
   </div>
 </section>
 
-<!-- CONTACT -->
 <section class="section contact line" id="contact">
   <p class="label">06 / LET’S CONNECT</p>
-
   <h2>Start a conversation.</h2>
-
-  <p class="large">
-    Questions and consultations in three languages.
-  </p>
-
+  <p class="large">Questions and consultations in three languages.</p>
   <p>
     Contact us about student enrollment, corporate Japanese
     training, or school management system development.
@@ -910,7 +646,7 @@ footer a{
 
     <article>
       <strong>English</strong>
-      <p>
+      <p lang="en">
         We welcome your questions and inquiries
         about enrollment, corporate training,
         and school management systems in English.
@@ -943,13 +679,10 @@ footer a{
 <footer>
   <strong>ReachPrime</strong><br>
   Training Center Corp.
-
   <p>
     Japanese Education · Corporate Training · School Management Systems
   </p>
-
   <a href="#top">Back to top ↑</a>
-
   <p>
     © <span id="year">2026</span> ReachPrime Training Center Corp.
   </p>
@@ -959,33 +692,22 @@ footer a{
 "use strict";
 
 /*
-  後から変更する情報は、ここにまとめています。
-
-  ・引用符 "" の中に入力してください。
-  ・空欄の登録情報は表示されません。
-  ・教師フォームURLを入力すると応募ボタンが表示されます。
-  ・問い合わせ先を入力すると「準備中」が消えます。
-  ・URLは https:// で始まるものを入力してください。
-
-  公開されるファイルです。
-  パスワード・APIキー・生徒の個人情報は入力しないでください。
+  後から入力・変更する設定です。
+  空欄の登録情報は非表示になります。
+  教師フォームのURLを入れると応募ボタンが表示されます。
+  パスワード・APIキー・生徒情報は入力しないでください。
 */
 const SETTINGS = {
   enrollmentUrl:
     "https://reachprime-enrollment.k-m-a-b-8824.chatgpt.site",
 
-  // 教師専用応募フォーム
   teacherApplicationUrl: "",
 
-  // 一般・法人向け問い合わせ先
   inquiryUrl: "",
   contactEmail: "",
   phone: "",
-
-  // 公開住所
   address: "Pampanga, Philippines",
 
-  // TESDA登録証の情報
   registeredSchoolName: "",
   registeredCourseName: "",
   registrationNumber: ""
@@ -998,7 +720,6 @@ function cleanText(value){
 function safeHttpsUrl(value){
   try{
     const url = new URL(cleanText(value));
-
     if(
       url.protocol === "https:" &&
       !url.username &&
@@ -1006,39 +727,29 @@ function safeHttpsUrl(value){
     ){
       return url.href;
     }
-  }catch{
-    // 空欄や無効なURLは表示に使用しません。
-  }
-
+  }catch{}
   return "";
 }
 
-/* 生徒入学フォーム */
+/* 生徒入学リンク */
 const enrollmentUrl = safeHttpsUrl(SETTINGS.enrollmentUrl);
-
 if(enrollmentUrl){
   document.getElementById("studentApply").href = enrollmentUrl;
 }
 
-/* TESDA登録情報 */
+/* 登録情報 */
 const registration = document.getElementById("registration");
 
-const registrationItems = [
+[
   ["Registered school", SETTINGS.registeredSchoolName],
   ["Registered course", SETTINGS.registeredCourseName],
   ["Registration no.", SETTINGS.registrationNumber]
-];
-
-registrationItems.forEach(([label, rawValue]) => {
+].forEach(([label, rawValue]) => {
   const value = cleanText(rawValue);
-
-  if(!value){
-    return;
-  }
+  if(!value) return;
 
   const dt = document.createElement("dt");
   const dd = document.createElement("dd");
-
   dt.textContent = label;
   dd.textContent = value;
 
@@ -1046,75 +757,604 @@ registrationItems.forEach(([label, rawValue]) => {
   registration.hidden = false;
 });
 
-/* 教師専用応募フォーム */
+/* 教師応募リンク */
 const teacherUrl = safeHttpsUrl(SETTINGS.teacherApplicationUrl);
-
 if(teacherUrl){
   const teacherButton = document.getElementById("teacherApply");
-
   teacherButton.href = teacherUrl;
   teacherButton.hidden = false;
-
   document.getElementById("teacherFormPending").hidden = true;
 }
 
-/* 一般・法人問い合わせ先 */
+/* 問い合わせリンク */
 const contactLinks = document.getElementById("contactLinks");
 
 function addContactLink(label, href, external = false){
   const link = document.createElement("a");
-
   link.className = "button";
   link.textContent = label;
   link.href = href;
-
   if(external){
     link.target = "_blank";
     link.rel = "noopener noreferrer";
   }
-
   contactLinks.append(link);
 }
 
 const inquiryUrl = safeHttpsUrl(SETTINGS.inquiryUrl);
-
 if(inquiryUrl){
-  addContactLink(
-    "お問い合わせ / Contact Us ↗",
-    inquiryUrl,
-    true
-  );
+  addContactLink("お問い合わせ / Contact Us ↗", inquiryUrl, true);
 }
 
 const email = cleanText(SETTINGS.contactEmail);
-
 if(/^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(email)){
   addContactLink(email, "mailto:" + email);
 }
 
 const phone = cleanText(SETTINGS.phone);
-
 if(/^\+?[\d ()-]{5,25}$/.test(phone)){
-  addContactLink(
-    phone,
-    "tel:" + phone.replace(/[^+\d]/g, "")
-  );
+  addContactLink(phone, "tel:" + phone.replace(/[^+\d]/g, ""));
 }
 
 if(contactLinks.children.length > 0){
   document.getElementById("contactPending").hidden = true;
 }
 
-/* 住所 */
+/* 住所・著作権年 */
 const address = cleanText(SETTINGS.address);
 const addressElement = document.getElementById("address");
-
 addressElement.textContent = address;
 addressElement.hidden = !address;
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
-/* 著作権年 */
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+<script>
+(function(){
+  "use strict";
+
+  /*
+    各項目は [対象、 日本語、 タガログ語] の順です。
+    英語は上のHTMLの原文を保存して使用します。
+  */
+  const translations = [
+    [
+      ".skip-link",
+      "本文へ移動",
+      "Lumaktaw sa pangunahing nilalaman"
+    ],
+    [
+      'nav a[href="#about"]',
+      "会社紹介",
+      "Tungkol sa Amin"
+    ],
+    [
+      'nav a[href="#school"]',
+      "日本語を学ぶ",
+      "Mag-aral ng Japanese"
+    ],
+    [
+      'nav a[href="#corporate"]',
+      "法人研修",
+      "Para sa mga Kumpanya"
+    ],
+    [
+      'nav a[href="#systems"]',
+      "学校管理システム",
+      "Sistema sa Paaralan"
+    ],
+    [
+      'nav a[href="#careers"]',
+      "教師募集",
+      "Maging Guro"
+    ],
+    [
+      'nav a[href="#contact"]',
+      "お問い合わせ",
+      "Makipag-ugnayan"
+    ],
+    [
+      ".hero h1",
+      "人が育つ。<br>企業が<em>進化する。</em>",
+      "Umuunlad ang mga tao.<br><em>Sumusulong ang negosyo.</em>"
+    ],
+    [
+      ".hero-description",
+      "日本語教育、法人向け研修、学校管理システムの開発。人を中心に、実際の運用経験を基に取り組んでいます。",
+      "Edukasyon sa wikang Japanese, pagsasanay para sa mga kumpanya, at pagbuo ng mga sistema sa pamamahala ng paaralan. Nakatuon sa tao at nakabatay sa aktuwal na karanasan."
+    ],
+    [
+      '.hero .actions a[href="#school"]',
+      "日本語を学びたい方へ →",
+      "Mag-aral ng Japanese sa Amin →"
+    ],
+    [
+      '.hero .actions a[href="#corporate"]',
+      "法人向け日本語研修 →",
+      "Pagsasanay para sa mga Kumpanya →"
+    ],
+    [
+      ".hero-note",
+      "フィリピン · 日本 / 教育 · テクノロジー",
+      "PILIPINAS · JAPAN / EDUKASYON · TEKNOLOHIYA"
+    ],
+    [
+      "#about .label",
+      "01 / REACHPRIMEについて",
+      "01 / TUNGKOL SA REACHPRIME"
+    ],
+    [
+      "#about h2",
+      "教育とテクノロジー。<br>共通する目的。",
+      "Edukasyon at teknolohiya.<br>Iisang layunin."
+    ],
+    [
+      "#about .large",
+      "日本語でのコミュニケーション力を育み、学校運営と生徒管理を支えるシステムを開発しています。",
+      "Tinutulungan naming mapaunlad ang kakayahang makipag-usap sa Japanese at bumubuo kami ng mga sistemang sumusuporta sa operasyon ng paaralan at pamamahala ng mga mag-aaral."
+    ],
+    [
+      "#about > div:nth-child(2) > p:nth-of-type(2)",
+      "ReachPrimeはフィリピンを拠点に、日本語教育、日本企業向けの日本語研修、学校管理アプリケーションの開発に取り組んでいます。",
+      "Nakabase sa Pilipinas ang ReachPrime. Nakatuon kami sa edukasyon sa Japanese, pagsasanay sa Japanese para sa mga kumpanya, at pagbuo ng mga application para sa pamamahala ng paaralan."
+    ],
+    [
+      "#about > div:nth-child(2) > p:nth-of-type(3)",
+      "自社の日本語学校で管理システムを実際に使用し、日々の運用経験を基に改善を続けています。",
+      "Ginagamit din namin ang aming sistema sa sarili naming paaralan ng Japanese at patuloy itong pinapahusay batay sa araw-araw na operasyon."
+    ],
+    [
+      "#about .tags span:nth-child(1)",
+      "日本語教育",
+      "Edukasyon sa Japanese"
+    ],
+    [
+      "#about .tags span:nth-child(2)",
+      "法人研修",
+      "Pagsasanay para sa mga Kumpanya"
+    ],
+    [
+      "#about .tags span:nth-child(3)",
+      "学校管理システム",
+      "Mga Sistema sa Pamamahala ng Paaralan"
+    ],
+    [
+      "#school .heading .label",
+      "02 / 日本語学校",
+      "02 / PAARALAN NG WIKANG JAPANESE"
+    ],
+    [
+      "#school h2",
+      "日本語を学び、<br>規律を身につける。",
+      "Matuto ng wika.<br>Linangin ang disiplina."
+    ],
+    [
+      "#school .enrollment-label",
+      "入学申込み受付中",
+      "BUKAS NA ANG APLIKASYON PARA SA MGA MAG-AARAL"
+    ],
+    [
+      "#school .large",
+      "あなたの日本語学習を、ここから始めましょう。",
+      "Dito magsisimula ang iyong pag-aaral ng Japanese."
+    ],
+    [
+      "#school .grid > div:first-child > p:nth-of-type(3)",
+      "日本語を本気で学びたい方へ。ReachPrime Japanese Language Centerで、目標に向けたコミュニケーション力・規律・自信を身につけましょう。",
+      "Handa ka na bang seryosohin ang pag-aaral ng Japanese? Sumali sa ReachPrime Japanese Language Center at linangin ang kakayahang makipag-usap, disiplina, at tiwala sa sarili upang makamit ang iyong mga layunin."
+    ],
+    [
+      "#school .grid > div:first-child > p:nth-of-type(4)",
+      "日常生活や職場で使う日本語を、適切な表現・マナー・責任ある行動とともに学びます。",
+      "Matuto ng Japanese para sa pang-araw-araw na buhay at pakikipag-usap sa trabaho, kasama ang angkop na pananalita, mabuting asal, at pagiging responsable."
+    ],
+    [
+      "#school .grid > div:first-child > p:nth-of-type(5)",
+      "継続して授業に参加し、日々練習を重ね、主体的に学ぶ意欲のある方をお待ちしています。",
+      "Inaanyayahan namin ang mga mag-aaral na handang regular na pumasok, magsanay, at aktibong makilahok sa kanilang pag-aaral."
+    ],
+    [
+      "#studentApply",
+      "今すぐ入学を申し込む ↗",
+      "Mag-apply Ngayon — Simulan ang Pag-aaral ng Japanese ↗"
+    ],
+    [
+      "#school .grid > div:first-child > p.muted",
+      '入学前のご質問は、<a href="#contact">タガログ語・英語・日本語でご相談いただけます。</a>',
+      'May tanong bago mag-apply? <a href="#contact">Makipag-usap sa amin sa Tagalog, English, o Japanese.</a>'
+    ],
+    [
+      ".training-item:nth-child(1) strong",
+      "01 / 日本語の基礎",
+      "01 / Mga Pundasyon ng Japanese"
+    ],
+    [
+      ".training-item:nth-child(1) p",
+      "語彙・文法・理解力を身につけ、日本語学習の土台を築きます。",
+      "Palawakin ang bokabularyo at pag-unawa sa gramatika bilang pundasyon ng iyong pag-aaral ng Japanese."
+    ],
+    [
+      ".training-item:nth-child(2) strong",
+      "02 / 日常のコミュニケーション",
+      "02 / Pang-araw-araw na Komunikasyon"
+    ],
+    [
+      ".training-item:nth-child(2) p",
+      "実践的な会話を通じて、聞く力と話す力を伸ばします。",
+      "Linangin ang pakikinig at pagsasalita sa pamamagitan ng praktikal na pag-uusap."
+    ],
+    [
+      ".training-item:nth-child(3) strong",
+      "03 / 職場で活躍するための準備",
+      "03 / Paghahanda para sa Trabaho"
+    ],
+    [
+      ".training-item:nth-child(3) p",
+      "日本の環境で必要とされる、適切な言葉遣い・マナー・責任ある行動を学びます。",
+      "Magsanay ng angkop na pananalita, mabuting asal, at pagiging responsable para sa mga sitwasyon sa Japan."
+    ],
+    [
+      ".tesda strong",
+      "TESDA登録校",
+      "Paaralang Rehistrado sa TESDA"
+    ],
+    [
+      "#corporate .section > div > .label",
+      "03 / 法人向け日本語研修",
+      "03 / PAGSASANAY SA JAPANESE PARA SA MGA KUMPANYA"
+    ],
+    [
+      "#corporate h2",
+      "フィリピン人への日本語教育を、企業の皆さまと。",
+      "Pagsasanay sa Japanese para sa mga Pilipino, katuwang ang mga kumpanya."
+    ],
+    [
+      "#corporate .section > div > p:nth-of-type(2)",
+      "日本企業からのご依頼で、フィリピン人を対象とした日本語トレーニングを実施しています。",
+      "Nagsasagawa kami ng pagsasanay sa Japanese para sa mga Pilipino sa kahilingan ng mga kumpanyang Hapon."
+    ],
+    [
+      "#corporate .section > div > p:nth-of-type(3)",
+      "新たな企業様からの研修に関するご相談も承ります。対象者や研修の目的、ご希望についてお聞かせください。",
+      "Tumatanggap din kami ng mga katanungan mula sa iba pang kumpanya. Ibahagi sa amin kung sino ang mga kalahok, ang layunin ng pagsasanay, at ang inyong mga pangangailangan."
+    ],
+    [
+      "#corporate .button",
+      "法人研修について相談する →",
+      "Magtanong Tungkol sa Pagsasanay →"
+    ],
+    [
+      "#corporate aside .label",
+      "新規企業の研修相談受付中",
+      "BUKAS PARA SA MGA KATANUNGAN NG KUMPANYA"
+    ],
+    [
+      "#corporate aside h3",
+      "まずは、研修のご希望をお聞かせください。",
+      "Ibahagi sa amin ang inyong mga pangangailangan sa pagsasanay."
+    ],
+    [
+      "#corporate li:nth-child(1)",
+      "対象となる受講者について",
+      "Mga lalahok sa pagsasanay"
+    ],
+    [
+      "#corporate li:nth-child(2)",
+      "日本語学習の目的について",
+      "Layunin ng pag-aaral ng Japanese"
+    ],
+    [
+      "#corporate li:nth-child(3)",
+      "ご希望の時期・人数について",
+      "Nais na iskedyul at bilang ng mga kalahok"
+    ],
+    [
+      "#systems > div:first-child > .label",
+      "04 / 学校・生徒管理システム",
+      "04 / PAMAMAHALA NG PAARALAN AT MGA MAG-AARAL"
+    ],
+    [
+      "#systems h2",
+      "学校運営と<br>生徒管理を支える。",
+      "Operasyon ng paaralan.<br>Pamamahala ng mga mag-aaral."
+    ],
+    [
+      "#systems .large",
+      "各種教育機関、特に中小規模の学校向けに、学校運営・生徒管理システムを開発しています。",
+      "Bumubuo kami ng mga sistema para sa operasyon ng paaralan at pamamahala ng mga mag-aaral, lalo na para sa maliliit at katamtamang laki ng mga paaralan."
+    ],
+    [
+      "#systems > div:first-child > p:nth-of-type(3)",
+      "自社の日本語学校で実際に稼働しており、日々の学校運営と生徒管理の経験を基に、開発・改善を続けています。",
+      "Ginagamit na ang aming sistema sa sarili naming paaralan ng Japanese. Patuloy namin itong binubuo at pinapahusay batay sa araw-araw na operasyon at pamamahala ng mga mag-aaral."
+    ],
+    [
+      "#systems .status",
+      "● 開発中 · 自社の日本語学校で稼働中",
+      "● Patuloy na binubuo · Ginagamit sa aming sariling paaralan"
+    ],
+    [
+      "#systems .system-art .label",
+      "日々の学校運営から生まれる開発",
+      "BINUBUO MULA SA AKTUWAL NA OPERASYON NG PAARALAN"
+    ],
+    [
+      "#systems .system-art h3",
+      "学校を支える。<br>生徒を支える。<br><em>改善を続ける。</em>",
+      "Suportahan ang paaralan.<br>Suportahan ang mag-aaral.<br><em>Patuloy na pagbutihin.</em>"
+    ],
+    [
+      "#systems .system-art > p:not(.label)",
+      "実際の学校運営の経験を、システム開発に反映します。",
+      "Ginagabayan ng aktuwal na karanasan sa paaralan ang pagbuo ng aming sistema."
+    ],
+    [
+      "#systems .system-art a",
+      "学校管理システムについて問い合わせる →",
+      "Magtanong Tungkol sa Sistema sa Paaralan →"
+    ],
+    [
+      "#careers > .label",
+      "05 / 日本語教師募集",
+      "05 / SUMALI SA AMING PANGKAT NG MGA GURO"
+    ],
+    [
+      "#careers h2",
+      "日本語を教え、<br>生徒の一歩を支える。",
+      "Magturo ng Japanese.<br>Tulungang sumulong ang mga mag-aaral."
+    ],
+    [
+      "#careers .large",
+      "日本語教師を募集しています。",
+      "Naghahanap kami ng mga guro ng wikang Japanese."
+    ],
+    [
+      "#careers .grid > div:first-child > p:nth-of-type(2)",
+      "生徒が実践的な日本語コミュニケーション力を身につけ、自信を持って使えるよう、一緒に支えませんか。ReachPrime Japanese Language Centerでの指導に関心のある方からのご相談をお待ちしています。",
+      "Tulungan ang mga mag-aaral na magkaroon ng praktikal na kasanayan sa Japanese at tiwalang gamitin ito. Inaanyayahan namin ang mga interesadong magturo sa ReachPrime Japanese Language Center."
+    ],
+    [
+      "#careers .grid > div:first-child > p:nth-of-type(3)",
+      "専用応募フォームの公開後、日本語の学習歴・資格、指導経験、勤務可能な時間などをお知らせください。",
+      "Kapag available na ang nakalaang application form, ibahagi ang iyong kaalaman at mga kwalipikasyon sa Japanese, karanasan sa pagtuturo, at oras na maaari kang magtrabaho."
+    ],
+    [
+      "#careers .career-panel h3",
+      "私たちと一緒に教えませんか？",
+      "Interesado ka bang magturo kasama namin?"
+    ],
+    [
+      "#careers .career-panel > p:not(.muted)",
+      "教師専用の応募フォームから、ご応募ください。",
+      "Gamitin ang nakalaang application form para sa mga guro upang ipahayag ang iyong interes."
+    ],
+    [
+      "#teacherApply",
+      "日本語教師に応募する ↗",
+      "Mag-apply Bilang Guro ng Japanese ↗"
+    ],
+    [
+      "#teacherFormPending",
+      "教師専用応募フォームは準備中です。公開後、こちらに応募ボタンを表示します。",
+      "Inihahanda pa ang application form para sa mga guro. Lalabas dito ang link kapag handa na ito."
+    ],
+    [
+      "#contact > .label",
+      "06 / お問い合わせ",
+      "06 / MAKIPAG-UGNAYAN"
+    ],
+    [
+      "#contact h2",
+      "まずは、ご相談ください。",
+      "Makipag-usap sa amin."
+    ],
+    [
+      "#contact > .large",
+      "ご質問・ご相談は、3言語で承ります。",
+      "Tumatanggap kami ng mga tanong at konsultasyon sa tatlong wika."
+    ],
+    [
+      "#contact > p:nth-of-type(3)",
+      "入学、法人向け日本語研修、学校管理システムの開発について、お気軽にお問い合わせください。",
+      "Makipag-ugnayan sa amin tungkol sa pag-enroll, pagsasanay sa Japanese para sa mga kumpanya, o pagbuo ng sistema sa pamamahala ng paaralan."
+    ],
+    [
+      "#contactPending",
+      "お問い合わせ先は準備中です。公開までしばらくお待ちください。",
+      "Inihahanda pa ang impormasyon para sa pakikipag-ugnayan. Ilalagay ito rito kapag handa na."
+    ],
+    [
+      "footer > p:first-of-type",
+      "日本語教育 · 法人研修 · 学校管理システム",
+      "Edukasyon sa Japanese · Pagsasanay para sa mga Kumpanya · Mga Sistema sa Paaralan"
+    ],
+    [
+      'footer a[href="#top"]',
+      "ページ上部へ ↑",
+      "Bumalik sa Itaas ↑"
+    ]
+  ];
+
+  const englishOverrides = {
+    "#corporate h2":
+      "Japanese language training for Filipino learners.",
+
+    "#corporate .section > div > p:nth-of-type(2)":
+      "We provide Japanese language training for Filipino learners at the request of Japanese companies.",
+
+    "#corporate .section > div > p:nth-of-type(3)":
+      "We welcome inquiries from additional corporate clients. Tell us about your learners, training goals, and preferred arrangements.",
+
+    "#corporate .button":
+      "Inquire About Corporate Training →",
+
+    "#corporate aside h3":
+      "Tell us about your training needs.",
+
+    "#corporate li:nth-child(1)":
+      "Who will participate in the training",
+
+    "#corporate li:nth-child(2)":
+      "Your Japanese learning goals",
+
+    "#corporate li:nth-child(3)":
+      "Preferred schedule and number of participants",
+
+    "#contactPending":
+      "Online inquiry contact details will be published here soon."
+  };
+
+  const entries = translations.map(([selector, ja, tl]) => {
+    const element = document.querySelector(selector);
+    if(!element) return null;
+
+    return {
+      element,
+      en: Object.prototype.hasOwnProperty.call(
+        englishOverrides, selector
+      ) ? englishOverrides[selector] : element.innerHTML,
+      ja,
+      tl
+    };
+  }).filter(Boolean);
+
+  const interfaceText = {
+    en:{
+      title:"ReachPrime | Japanese Education & School Management Systems",
+      description:"ReachPrime Training Center Corp. provides Japanese language education and corporate Japanese training, and develops school and student management systems in the Philippines.",
+      nav:"Main navigation",
+      home:"ReachPrime home",
+      selector:"Select website language",
+      contact:"Contact Us ↗",
+      registration:[
+        "Registered school",
+        "Registered course",
+        "Registration no."
+      ]
+    },
+    ja:{
+      title:"ReachPrime | 日本語教育・法人研修・学校管理システム",
+      description:"フィリピンのReachPrime Training Center Corp.。日本語教育、日本企業向け研修、学校運営・生徒管理システムの開発に取り組んでいます。",
+      nav:"メインメニュー",
+      home:"ReachPrimeのトップへ",
+      selector:"表示言語を選択",
+      contact:"お問い合わせ ↗",
+      registration:[
+        "登録学校名",
+        "登録コース名",
+        "登録番号"
+      ]
+    },
+    tl:{
+      title:"ReachPrime | Edukasyon sa Japanese at Pamamahala ng Paaralan",
+      description:"Nagbibigay ang ReachPrime Training Center Corp. ng edukasyon at pagsasanay sa Japanese, at bumubuo ng mga sistema sa pamamahala ng paaralan at mga mag-aaral sa Pilipinas.",
+      nav:"Pangunahing menu",
+      home:"Pangunahing pahina ng ReachPrime",
+      selector:"Piliin ang wika ng website",
+      contact:"Makipag-ugnayan ↗",
+      registration:[
+        "Rehistradong paaralan",
+        "Rehistradong kurso",
+        "Numero ng rehistrasyon"
+      ]
+    }
+  };
+
+  const select = document.getElementById("siteLanguage");
+  const storageKey = "reachprime-language";
+
+  function applyLanguage(language){
+    const lang = ["en","ja","tl"].includes(language)
+      ? language : "en";
+
+    /*
+      固定の翻訳文のみを使用します。
+      URL・フォーム入力などをHTMLとして挿入しません。
+    */
+    entries.forEach(entry => {
+      entry.element.innerHTML = entry[lang];
+      entry.element.setAttribute("lang", lang);
+    });
+
+    document.documentElement.lang = lang;
+    document.title = interfaceText[lang].title;
+
+    const description = document.querySelector(
+      'meta[name="description"]'
+    );
+    if(description){
+      description.content = interfaceText[lang].description;
+    }
+
+    const nav = document.querySelector("header nav");
+    const brand = document.querySelector(".brand");
+
+    if(nav){
+      nav.setAttribute("aria-label", interfaceText[lang].nav);
+    }
+    if(brand){
+      brand.setAttribute("aria-label", interfaceText[lang].home);
+    }
+    if(select){
+      select.value = lang;
+      select.setAttribute("aria-label", interfaceText[lang].selector);
+    }
+
+    const corporateList = document.querySelector("#corporate ul");
+    if(corporateList){
+      corporateList.lang = lang;
+    }
+
+    /* 問い合わせボタンのリンク先は保持 */
+    document.querySelectorAll("#contactLinks a").forEach(link => {
+      if(link.getAttribute("href").startsWith("https://")){
+        link.textContent = interfaceText[lang].contact;
+      }
+    });
+
+    /* 登録証の正式名称・番号は翻訳せず保持 */
+    if(typeof SETTINGS !== "undefined"){
+      const values = [
+        SETTINGS.registeredSchoolName,
+        SETTINGS.registeredCourseName,
+        SETTINGS.registrationNumber
+      ];
+
+      const visibleLabels = interfaceText[lang].registration
+        .filter((label, index) => {
+          return typeof values[index] === "string" &&
+            values[index].trim() !== "";
+        });
+
+      document.querySelectorAll("#registration dt")
+        .forEach((element, index) => {
+          if(visibleLabels[index]){
+            element.textContent = visibleLabels[index];
+          }
+        });
+    }
+
+    try{
+      localStorage.setItem(storageKey, lang);
+    }catch{}
+  }
+
+  if(select){
+    select.addEventListener("change", event => {
+      applyLanguage(event.target.value);
+    });
+  }
+
+  let initialLanguage = "en";
+
+  try{
+    const savedLanguage = localStorage.getItem(storageKey);
+    if(["en","ja","tl"].includes(savedLanguage)){
+      initialLanguage = savedLanguage;
+    }
+  }catch{}
+
+  applyLanguage(initialLanguage);
+})();
 </script>
 
 </body>
