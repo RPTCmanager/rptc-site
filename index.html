@@ -335,6 +335,36 @@ html[lang="tl"] h1{
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
 }
+
+/* TESDA登録証明書 */
+.certificates{margin-top:35px}
+.certificates h3{margin-bottom:10px}
+.certificate-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+  margin-top:22px;
+}
+.certificate-card{
+  display:block;
+  min-width:0;
+  padding:18px;
+  background:white;
+  border:1px solid var(--line);
+  text-align:center;
+  text-decoration:none;
+}
+.certificate-card:hover{border-color:#b58843}
+.certificate-card img{display:block;width:100%;height:auto}
+.certificate-card strong{
+  display:block;
+  margin-top:15px;
+  font-size:16px;
+}
+@media(max-width:650px){
+  .certificate-grid{grid-template-columns:minmax(0,1fr)}
+  .certificate-card{width:100%;max-width:360px;margin:auto}
+}
 </style>
 </head>
 
@@ -436,7 +466,6 @@ html[lang="tl"] h1{
   <div class="grid">
     <div>
       <p class="enrollment-label">NOW ACCEPTING STUDENT APPLICATIONS</p>
-
       <p class="large">Your Japanese learning journey starts here.</p>
 
       <p>
@@ -496,11 +525,57 @@ html[lang="tl"] h1{
   </div>
 
   <div class="tesda">
-    <img src="tesda.png" alt="TESDA" loading="lazy">
+    <img src="tesd.png" alt="TESDA" loading="lazy">
     <div>
       <strong>TESDA-registered school</strong>
       <p>ReachPrime Training Center Corp.</p>
       <dl id="registration" class="registration" hidden></dl>
+    </div>
+  </div>
+
+  <!-- TESDA登録証明書3枚 -->
+  <div class="certificates">
+    <h3 id="certificateTitle">
+      TESDA Program Registration Certificates
+    </h3>
+
+    <p class="muted" id="certificateDescription">
+      Select a certificate to open the full image in a new tab.
+    </p>
+
+    <div class="certificate-grid">
+      <a class="certificate-card"
+        href="tesda-a1.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src="tesda-a1.png"
+          alt="TESDA Certificate of TVET Program Registration — Japanese Language A1 Level"
+          loading="lazy">
+        <strong>Japanese Language A1 Level ↗</strong>
+      </a>
+
+      <a class="certificate-card"
+        href="tesda-a2.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src="tesda-a2.png"
+          alt="TESDA Certificate of TVET Program Registration — Japanese Language A2 Level"
+          loading="lazy">
+        <strong>Japanese Language A2 Level ↗</strong>
+      </a>
+
+      <a class="certificate-card"
+        href="tesda-b1.png"
+        target="_blank"
+        rel="noopener noreferrer">
+        <img
+          src="tesda-b1.png"
+          alt="TESDA Certificate of TVET Program Registration — Japanese Language B1 Level"
+          loading="lazy">
+        <strong>Japanese Language B1 Level ↗</strong>
+      </a>
     </div>
   </div>
 </section>
@@ -577,7 +652,6 @@ html[lang="tl"] h1{
     </h3>
 
     <p>Practical school experience guides our system development.</p>
-
     <a href="#contact">
       Inquire About Our School Management System →
     </a>
@@ -817,6 +891,16 @@ document.getElementById("year").textContent = new Date().getFullYear();
     英語は上のHTMLの原文を保存して使用します。
   */
   const translations = [
+    [
+      "#certificateTitle",
+      "TESDA プログラム登録証明書",
+      "Mga Sertipiko ng Rehistrasyon ng Programa sa TESDA"
+    ],
+    [
+      "#certificateDescription",
+      "証明書をクリックすると、新しいタブで画像を大きく表示します。",
+      "Piliin ang sertipiko upang buksan ang buong larawan sa bagong tab."
+    ],
     [
       ".skip-link",
       "本文へ移動",
