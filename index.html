@@ -339,28 +339,11 @@ html[lang="tl"] h1{
 /* TESDA登録証明書 */
 .certificates{margin-top:35px}
 .certificates h3{margin-bottom:10px}
-.certificate-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-  margin-top:22px;
-}
-.certificate-card{
-  display:block;
-  min-width:0;
-  padding:18px;
-  background:white;
-  border:1px solid var(--line);
-  text-align:center;
-  text-decoration:none;
-}
+.certificate-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:22px}
+.certificate-card{display:block;min-width:0;padding:18px;background:white;border:1px solid var(--line);text-align:center;text-decoration:none}
 .certificate-card:hover{border-color:#b58843}
 .certificate-card img{display:block;width:100%;height:auto}
-.certificate-card strong{
-  display:block;
-  margin-top:15px;
-  font-size:16px;
-}
+.certificate-card strong{display:block;margin-top:15px;font-size:16px}
 @media(max-width:650px){
   .certificate-grid{grid-template-columns:minmax(0,1fr)}
   .certificate-card{width:100%;max-width:360px;margin:auto}
@@ -466,6 +449,7 @@ html[lang="tl"] h1{
   <div class="grid">
     <div>
       <p class="enrollment-label">NOW ACCEPTING STUDENT APPLICATIONS</p>
+
       <p class="large">Your Japanese learning journey starts here.</p>
 
       <p>
@@ -525,7 +509,7 @@ html[lang="tl"] h1{
   </div>
 
   <div class="tesda">
-    <img src="tesda.png" alt="TESDA" loading="lazy">
+    <img src="tesd.png" alt="TESDA" loading="lazy">
     <div>
       <strong>TESDA-registered school</strong>
       <p>ReachPrime Training Center Corp.</p>
@@ -533,47 +517,20 @@ html[lang="tl"] h1{
     </div>
   </div>
 
-  <!-- TESDA登録証明書3枚 -->
   <div class="certificates">
-    <h3 id="certificateTitle">
-      TESDA Program Registration Certificates
-    </h3>
-
-    <p class="muted" id="certificateDescription">
-      Select a certificate to open the full image in a new tab.
-    </p>
-
+    <h3 id="certificateTitle">TESDA Program Registration Certificates</h3>
+    <p class="muted" id="certificateDescription">Select a certificate to open the full image in a new tab.</p>
     <div class="certificate-grid">
-      <a class="certificate-card"
-        href="tesda-a1.png"
-        target="_blank"
-        rel="noopener noreferrer">
-        <img
-          src="tesda-a1.png"
-          alt="TESDA Certificate of TVET Program Registration — Japanese Language A1 Level"
-          loading="lazy">
+      <a class="certificate-card" href="tesda-a1.png" target="_blank" rel="noopener noreferrer">
+        <img src="tesda-a1.png" alt="TESDA Certificate of TVET Program Registration — Japanese Language A1 Level" loading="lazy">
         <strong>Japanese Language A1 Level ↗</strong>
       </a>
-
-      <a class="certificate-card"
-        href="tesda-a2.png"
-        target="_blank"
-        rel="noopener noreferrer">
-        <img
-          src="tesda-a2.png"
-          alt="TESDA Certificate of TVET Program Registration — Japanese Language A2 Level"
-          loading="lazy">
+      <a class="certificate-card" href="tesda-a2.png" target="_blank" rel="noopener noreferrer">
+        <img src="tesda-a2.png" alt="TESDA Certificate of TVET Program Registration — Japanese Language A2 Level" loading="lazy">
         <strong>Japanese Language A2 Level ↗</strong>
       </a>
-
-      <a class="certificate-card"
-        href="tesda-b1.png"
-        target="_blank"
-        rel="noopener noreferrer">
-        <img
-          src="tesda-b1.png"
-          alt="TESDA Certificate of TVET Program Registration — Japanese Language B1 Level"
-          loading="lazy">
+      <a class="certificate-card" href="tesda-b1.png" target="_blank" rel="noopener noreferrer">
+        <img src="tesda-b1.png" alt="TESDA Certificate of TVET Program Registration — Japanese Language B1 Level" loading="lazy">
         <strong>Japanese Language B1 Level ↗</strong>
       </a>
     </div>
@@ -652,6 +609,7 @@ html[lang="tl"] h1{
     </h3>
 
     <p>Practical school experience guides our system development.</p>
+
     <a href="#contact">
       Inquire About Our School Management System →
     </a>
@@ -745,7 +703,24 @@ html[lang="tl"] h1{
     <span lang="ja">お問い合わせ先は準備中です。</span>
   </p>
 
-  <p class="muted" id="address">Pampanga, Philippines</p>
+  <div id="locationDetails" style="margin-top:30px;overflow-wrap:anywhere">
+  <h3 id="locationTitle">Location &amp; Contact</h3>
+  <p><strong id="addressLabel">Address</strong><br>
+    <span id="address">K&amp;A-8 Arcade, Zone 1, Jose Abad Santos Highway, Barangay Cabalantian, Bacolor, Pampanga, 2001</span>
+  </p>
+  <p><strong id="phoneLabel">Phone</strong><br>
+    <a href="tel:+639662011237">+63 966-201-1237</a>
+  </p>
+  <p><strong id="emailLabel">Email</strong><br>
+    <a href="mailto:reachprimetcc@gmail.com">reachprimetcc@gmail.com</a>
+  </p>
+  <p><strong>Facebook</strong><br>
+    <a href="https://www.facebook.com/reachprimeonlinetutorialservice" target="_blank" rel="noopener noreferrer">ReachPrime Training Center Corp. ↗</a>
+  </p>
+  <p><strong>Google Maps</strong><br>
+    <a id="mapLink" href="https://www.google.com/maps/place/ReachPrime+Training+Center+Corp./@15.01219,120.6540113,644m/data=!3m1!1e3!4m14!1m7!3m6!1s0x3396f72ecc202bdd:0x9f2f2aa3f732ced0!2sA2K+Group!8m2!3d15.0121848!4d120.6565862!16s%2Fg%2F11ld590xwl!3m5!1s0x3396f7b70ad2ed7f:0x5c4f93e44ff9d068!8m2!3d15.0122202!4d120.6565334!16s%2Fg%2F11w2361ynf?entry=ttu&amp;g_ep=EgoyMDI2MDkyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">Open in Google Maps ↗</a>
+  </p>
+</div>
 </section>
 
 </main>
@@ -778,9 +753,9 @@ const SETTINGS = {
   teacherApplicationUrl: "",
 
   inquiryUrl: "",
-  contactEmail: "",
-  phone: "",
-  address: "Pampanga, Philippines",
+  contactEmail: "reachprimetcc@gmail.com",
+  phone: "+63 966-201-1237",
+  address: "K&A-8 Arcade, Zone 1, Jose Abad Santos Highway, Barangay Cabalantian, Bacolor, Pampanga, 2001",
 
   registeredSchoolName: "",
   registeredCourseName: "",
@@ -862,15 +837,15 @@ if(inquiryUrl){
 
 const email = cleanText(SETTINGS.contactEmail);
 if(/^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(email)){
-  addContactLink(email, "mailto:" + email);
+  if(!document.getElementById("locationDetails")) addContactLink(email, "mailto:" + email);
 }
 
 const phone = cleanText(SETTINGS.phone);
 if(/^\+?[\d ()-]{5,25}$/.test(phone)){
-  addContactLink(phone, "tel:" + phone.replace(/[^+\d]/g, ""));
+  if(!document.getElementById("locationDetails")) addContactLink(phone, "tel:" + phone.replace(/[^+\d]/g, ""));
 }
 
-if(contactLinks.children.length > 0){
+if(contactLinks.children.length > 0 || document.getElementById("locationDetails")){
   document.getElementById("contactPending").hidden = true;
 }
 
@@ -891,16 +866,14 @@ document.getElementById("year").textContent = new Date().getFullYear();
     英語は上のHTMLの原文を保存して使用します。
   */
   const translations = [
-    [
-      "#certificateTitle",
-      "TESDA プログラム登録証明書",
-      "Mga Sertipiko ng Rehistrasyon ng Programa sa TESDA"
-    ],
-    [
-      "#certificateDescription",
-      "証明書をクリックすると、新しいタブで画像を大きく表示します。",
-      "Piliin ang sertipiko upang buksan ang buong larawan sa bagong tab."
-    ],
+    ["#locationTitle", "所在地・お問い合わせ", "Lokasyon at Pakikipag-ugnayan"],
+    ["#addressLabel", "住所", "Address"],
+    ["#phoneLabel", "電話番号", "Telepono"],
+    ["#emailLabel", "メールアドレス", "Email"],
+    ["#mapLink", "Googleマップで開く ↗", "Buksan sa Google Maps ↗"],
+
+    ["#certificateTitle", "TESDA プログラム登録証明書", "Mga Sertipiko ng Rehistrasyon ng Programa sa TESDA"],
+    ["#certificateDescription", "証明書をクリックすると、新しいタブで画像を大きく表示します。", "Piliin ang sertipiko upang buksan ang buong larawan sa bagong tab."],
     [
       ".skip-link",
       "本文へ移動",
@@ -1441,242 +1414,132 @@ document.getElementById("year").textContent = new Date().getFullYear();
 })();
 </script>
 
- <!-- プライバシー説明：ここから -->
+<!-- ReachPrime privacy information: 2026-09-24 -->
 <style>
-#rp-policy{
-  padding:40px 7%;
-  background:#f7f5ef;
-  color:#243746;
-  overflow-wrap:anywhere;
-}
-#rp-policy details{
-  max-width:1100px;
-  margin:16px auto;
-  border:1px solid #d8d3c8;
-  padding:20px;
-  background:white;
-  scroll-margin-top:30px;
-}
-#rp-policy summary{
-  cursor:pointer;
-  font-weight:bold;
-  font-size:20px;
-}
-#rp-policy p{
-  font-size:15px;
-  line-height:1.8;
-}
-#rp-policy a{
-  color:inherit;
-  text-decoration:underline;
-}
-.rp-policy-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px 24px;
-  margin-top:20px;
-}
+#rp-policy{padding:40px 7%;background:#f7f5ef;color:#243746;overflow-wrap:anywhere}
+#rp-policy details{max-width:1100px;margin:16px auto;border:1px solid #d8d3c8;padding:20px;background:#fff;scroll-margin-top:30px}
+#rp-policy summary{cursor:pointer;font-weight:bold;font-size:20px}
+#rp-policy p{font-size:15px;line-height:1.8}
+#rp-policy a{color:inherit;text-decoration:underline}
+.rp-policy-links{display:flex;flex-wrap:wrap;gap:12px 24px;margin-top:20px}
 </style>
-
 <section id="rp-policy" aria-label="Privacy information">
   <details id="rp-privacy">
     <summary id="rp-privacy-title">Privacy information</summary>
     <div id="rp-privacy-text"></div>
-    <p>
-      <a href="mailto:reachprimetcc@gmail.com">
-        reachprimetcc@gmail.com
-      </a>
-    </p>
+    <p><a href="mailto:reachprimetcc@gmail.com">reachprimetcc@gmail.com</a></p>
   </details>
-
   <details id="rp-storage">
-    <summary id="rp-storage-title">
-      Cookies &amp; browser storage
-    </summary>
+    <summary id="rp-storage-title">Cookies &amp; browser storage</summary>
     <div id="rp-storage-text"></div>
   </details>
-
-  <noscript>
-    <p>
-      Privacy contact:
-      <a href="mailto:reachprimetcc@gmail.com">
-        reachprimetcc@gmail.com
-      </a>.
-      TESDA receives students’ names and course participation
-      information. Companies commissioning training receive
-      participating students’ attendance records and academic
-      results. Retention periods have not yet been established.
-    </p>
-  </noscript>
+  <noscript><p>Privacy contact: <a href="mailto:reachprimetcc@gmail.com">reachprimetcc@gmail.com</a>. TESDA receives students’ names and course participation information. Companies commissioning training receive participating students’ attendance records and academic results. Retention periods have not yet been established.</p></noscript>
 </section>
-
 <script>
 (() => {
   "use strict";
-
   if(document.getElementById("rp-policy-links")) return;
-
   const texts = {
     en: {
       privacy: "Privacy information",
       storage: "Cookies & browser storage",
-
       paragraphs: [
         "Operator: ReachPrime Training Center Corp. | Information updated: September 24, 2026.",
-
         "This notice describes the confirmed data-sharing arrangements and privacy contact. It does not replace the information provided on individual application forms.",
-
         "Sharing: We provide students’ names and course participation information to TESDA. For training commissioned by Japanese companies, we provide participating students’ attendance records and academic results to the company commissioning the training.",
-
         "Retention: Specific retention periods have not yet been established. Please contact us for questions about the retention or deletion of your records.",
-
         "Your requests: For privacy inquiries or requests to access, correct, or delete your personal data, use the email address below. Requests will be handled in accordance with applicable law."
       ],
-
       browser: [
         "ReachPrime does not use analytics or advertising measurement tools on this website.",
-
         "The website uses localStorage, a browser storage feature distinct from cookies, to remember your selected display language. This setting remains until it is removed or cleared by your browser. You can remove it using your browser’s site-data settings; doing so resets your saved language preference.",
-
         "External application forms and hosting services may process data separately. This notice does not assert that those services use no cookies. Please review their privacy notices before submitting information."
       ]
     },
-
     ja: {
       privacy: "プライバシーについて",
       storage: "クッキー・ブラウザー保存について",
-
       paragraphs: [
         "運営者：ReachPrime Training Center Corp.｜情報更新日：2026年9月24日。",
-
         "この説明は、確認済みの個人情報の提供先と相談窓口を案内するものです。各申込フォームに記載される個人情報の取り扱いの説明に代わるものではありません。",
-
         "外部提供：当校は、TESDAへ生徒の氏名・受講情報を提供します。日本企業から依頼を受けた研修では、対象生徒の出席状況・成績を研修依頼元の企業へ提供します。",
-
         "保存期間：具体的な保存期間は現在未定です。ご自身の記録の保存・削除については、下記の窓口へお問い合わせください。",
-
         "ご相談：個人情報の取り扱いや、ご自身の情報の開示・訂正・削除に関するご相談は、下記メールアドレスへご連絡ください。適用される法令に基づき対応します。"
       ],
-
       browser: [
         "ReachPrimeは、このHPでアクセス解析・広告計測ツールを使用していません。",
-
         "選択した表示言語を記憶するため、クッキーとは別のブラウザー保存機能（localStorage）を使用します。この設定は、ご自身またはブラウザーによって削除されるまで保存されます。ブラウザーのサイトデータ設定から削除すると、保存した言語設定がリセットされます。",
-
         "外部の申込フォームやホスティングサービスでは、別途データが処理される場合があります。この説明は、それらのサービスがクッキーを使用しないことを保証するものではありません。情報を送信する前に、各サービスのプライバシー説明をご確認ください。"
       ]
     },
-
     tl: {
       privacy: "Impormasyon tungkol sa privacy",
       storage: "Cookies at imbakan ng browser",
-
       paragraphs: [
         "Tagapangasiwa: ReachPrime Training Center Corp. | Na-update: Setyembre 24, 2026.",
-
         "Inilalarawan dito ang nakumpirmang pagbabahagi ng datos at ang contact para sa privacy. Hindi nito pinapalitan ang impormasyong nasa bawat application form.",
-
         "Pagbabahagi: Ibinabahagi namin sa TESDA ang pangalan ng mga mag-aaral at impormasyon tungkol sa kanilang paglahok sa kurso. Para sa pagsasanay na ipinagkatiwala ng mga kumpanyang Hapones, ibinabahagi namin sa kumpanyang nagpagawa ng pagsasanay ang mga tala ng pagpasok at resulta ng pag-aaral ng mga kalahok.",
-
         "Pag-iingat ng datos: Wala pang itinakdang tiyak na panahon ng pag-iingat. Makipag-ugnayan sa amin para sa mga tanong tungkol sa pag-iingat o pagbura ng inyong mga rekord.",
-
         "Mga kahilingan: Para sa mga tanong tungkol sa privacy o kahilingang makita, itama, o burahin ang inyong personal na datos, gamitin ang email sa ibaba. Tutugunan ang mga kahilingan alinsunod sa naaangkop na batas."
       ],
-
       browser: [
         "Hindi gumagamit ang ReachPrime ng mga tool para sa analytics o pagsukat ng advertising sa website na ito.",
-
         "Gumagamit ang website ng localStorage, isang imbakan ng browser na iba sa cookies, upang tandaan ang napiling wika. Nananatili ito hanggang burahin ninyo o ng browser. Maaari itong alisin sa mga setting ng site data ng browser; mare-reset ang naka-save na wika.",
-
         "Maaaring hiwalay na magproseso ng datos ang mga panlabas na application form at hosting service. Hindi sinasabi ng abisong ito na walang cookies ang mga serbisyong iyon. Basahin ang kanilang mga abiso sa privacy bago magsumite ng impormasyon."
       ]
     }
   };
-
   const section = document.getElementById("rp-policy");
   const footer = document.querySelector("footer");
-
   const nav = document.createElement("nav");
   nav.id = "rp-policy-links";
   nav.className = "rp-policy-links";
-
   const privacyLink = document.createElement("a");
   const storageLink = document.createElement("a");
-
   privacyLink.href = "#rp-privacy";
   storageLink.href = "#rp-storage";
   nav.append(privacyLink, storageLink);
-
-  if(footer){
-    footer.before(section);
-    footer.append(nav);
-  }else{
-    section.before(nav);
-  }
-
+  if(footer){footer.before(section);footer.append(nav);}
+  else section.before(nav);
   [privacyLink, storageLink].forEach(link => {
     link.addEventListener("click", () => {
       document.getElementById(link.hash.slice(1)).open = true;
     });
   });
-
   function renderParagraphs(id, paragraphs){
-    const elements = paragraphs.map(text => {
+    document.getElementById(id).replaceChildren(...paragraphs.map(text => {
       const p = document.createElement("p");
       p.textContent = text;
       return p;
-    });
-
-    document.getElementById(id).replaceChildren(...elements);
+    }));
   }
-
   function render(){
     const lang = document.documentElement.lang;
     const t = texts[lang] || texts.en;
-
     section.lang = texts[lang] ? lang : "en";
     section.setAttribute("aria-label", t.privacy);
     nav.setAttribute("aria-label", t.privacy);
-
-    privacyLink.textContent = t.privacy;
-    storageLink.textContent = t.storage;
-
-    document.getElementById("rp-privacy-title").textContent =
-      t.privacy;
-
-    document.getElementById("rp-storage-title").textContent =
-      t.storage;
-
+    privacyLink.textContent = document.getElementById("rp-privacy-title").textContent = t.privacy;
+    storageLink.textContent = document.getElementById("rp-storage-title").textContent = t.storage;
     renderParagraphs("rp-privacy-text", t.paragraphs);
     renderParagraphs("rp-storage-text", t.browser);
   }
-
   function openHash(){
     if(["#rp-privacy", "#rp-storage"].includes(location.hash)){
-      const detail = document.getElementById(
-        location.hash.slice(1)
-      );
-
+      const detail = document.getElementById(location.hash.slice(1));
       detail.open = true;
       detail.scrollIntoView();
     }
   }
-
-  new MutationObserver(render).observe(
-    document.documentElement,
-    {
-      attributes: true,
-      attributeFilter: ["lang"]
-    }
-  );
-
+  new MutationObserver(render).observe(document.documentElement, {
+    attributes:true, attributeFilter:["lang"]
+  });
   window.addEventListener("hashchange", openHash);
-
   render();
   openHash();
 })();
 </script>
-<!-- プライバシー説明：ここまで --> 
+<!-- End ReachPrime privacy information -->
 
 </body>
 </html>
