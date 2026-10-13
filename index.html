@@ -348,6 +348,9 @@ html[lang="tl"] h1{
   .certificate-grid{grid-template-columns:minmax(0,1fr)}
   .certificate-card{width:100%;max-width:360px;margin:auto}
 }
+
+.system-art .portal-guide-button{display:inline-block;background:#e5cc93;color:#142238;padding:14px 18px;border:1px solid #b99a56;border-radius:4px;margin:10px 0 18px;font-weight:600;line-height:1.7}
+.system-art .portal-guide-button:hover{background:#f0ddaf}
 </style>
 </head>
 
@@ -611,7 +614,9 @@ html[lang="tl"] h1{
       <em>Keep improving.</em>
     </h3>
 
-    <p>Practical school experience guides our system development.</p>
+    <p>Attendance, learning and teacher advice—connected by records. Explore Manager Portal and see how six months of training can become a learning history beyond a certificate.</p>
+
+    <a class="portal-guide-button" id="managerPortalGuide" href="manager-portal.html?lang=en">Explore Manager Portal — Features &amp; Benefits ↗</a>
 
     <a href="#contact">
       Inquire About Our School Management System →
@@ -1144,11 +1149,11 @@ document.getElementById("year").textContent = new Date().getFullYear();
     ],
     [
       "#systems .system-art > p:not(.label)",
-      "実際の学校運営の経験を、システム開発に反映します。",
-      "Ginagabayan ng aktuwal na karanasan sa paaralan ang pagbuo ng aming sistema."
+      "出席・学習・教師の助言を記録でつなぐManager Portal。卒業証書だけでは伝わらない、6か月の学習履歴と全機能をご紹介します。",
+      "Pinag-uugnay ng Manager Portal ang pagdalo, pag-aaral at payo ng guro sa pamamagitan ng mga tala. Tuklasin ang mga tampok at ang anim na buwang pag-aaral na higit pa sa sertipiko."
     ],
     [
-      "#systems .system-art a",
+      "#systems .system-art a[href=\"#contact\"]",
       "学校管理システムについて問い合わせる →",
       "Magtanong Tungkol sa Sistema sa Paaralan →"
     ],
@@ -1263,6 +1268,8 @@ document.getElementById("year").textContent = new Date().getFullYear();
       "Online inquiry contact details will be published here soon."
   };
 
+  translations.push(["#managerPortalGuide", "Manager Portalの全機能・メリットを見る ↗", "Tingnan ang mga tampok at benepisyo ng Manager Portal ↗"]);
+
   const entries = translations.map(([selector, ja, tl]) => {
     const element = document.querySelector(selector);
     if(!element) return null;
@@ -1325,6 +1332,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
   function applyLanguage(language){
     const lang = ["en","ja","tl"].includes(language)
       ? language : "en";
+    document.getElementById("managerPortalGuide").href = "manager-portal.html?lang=" + (lang === "ja" ? "ja" : "en");
 
     /*
       固定の翻訳文のみを使用します。
